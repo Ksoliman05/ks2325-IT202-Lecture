@@ -1,3 +1,4 @@
+-- Active: 1757342891876@@sql1.njit.edu@3306
 SHOW DATABASES;
 
 CREATE TABLE admins (

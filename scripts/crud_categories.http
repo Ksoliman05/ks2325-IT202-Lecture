@@ -1,20 +1,34 @@
+### Create Category 100 - Guitars
 POST http://localhost:3000/addcategory.test.php
 Content-Type: application/x-www-form-urlencoded
 
 categoryID=100
 &categoryCode=GTR
 &categoryName=Guitars
-###
-GET http://localhost:3000/listcategories.test.php
-###
-POST http://localhost:3000/changecategory.test.php
+
+### Create Category 200 - Bass
+POST http://localhost:3000/addcategory.test.php
 Content-Type: application/x-www-form-urlencoded
 
-categoryID=100
+categoryID=200
 &categoryCode=BASS
 &categoryName=Bass
-###
-POST http://localhost:3000/removecategory.test.php
+
+### Create Category 300 - Electric
+POST http://localhost:3000/addcategory.test.php
 Content-Type: application/x-www-form-urlencoded
 
-categoryID=100
+categoryID=300
+&categoryCode=ELEC
+&categoryName=Electric
+
+### Create Category 400 - Acoustic
+POST http://localhost:3000/addcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+categoryID=400
+&categoryCode=ACOS
+&categoryName=Acoustic
+
+### List all categories
+GET http://localhost:3000/listcategories.test.php
