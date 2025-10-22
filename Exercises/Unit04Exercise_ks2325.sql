@@ -53,3 +53,5 @@ SELECT COUNT(score) AS games, AVG(score) AS average FROM games WHERE golferid = 
 
 SELECT * FROM games JOIN golfers ON games.golferid = golfers.golferid 
 WHERE games.golferid = 99;
+
+SELECT * From golfers;
