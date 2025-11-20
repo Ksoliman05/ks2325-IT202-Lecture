@@ -31,9 +31,9 @@
  $model6 = $doc->createElement("model", "camry");
 
 
- $model4 = $car2->appendChild($model4);
- $model5 = $car2->appendChild($model5);
- $model6 = $car2->appendChild($model6);
+ $model4 = $car3->appendChild($model4);
+ $model5 = $car3->appendChild($model5);
+ $model6 = $car3->appendChild($model6);
 
 
  $output = $doc->saveXML();
