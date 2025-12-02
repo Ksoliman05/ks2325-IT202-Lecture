@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing jqeury replacing text</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous">
+    </script>
+    <script>
+        jQuery(document).ready(function(){
+            $("button").click(function(){
+                //$("p").text("The text has been replaced!");
+                $("p").html("<h1>The text has been replaced with a heading!</h1>");
+            });
+        });
+    </script>
+</head>
+<body> 
+    <h1>This is my heading</h1>
+    <p>This is my paragraph.</p>
+    <button>Click to replace text</button>
+</body>
+</html>

@@ -6,13 +6,18 @@
  if (filter_var($emailAddress, FILTER_VALIDATE_EMAIL)){
  $query = "SELECT firstName, lastName FROM admins " .
         "WHERE emailAddress = ? AND password = SHA2(?,256)";
+
  $db = getDB();
  $stmt = $db->prepare($query);
+ 
+ 
  $stmt->bind_param("ss", $emailAddress, $password);
  $stmt->execute();
  $stmt->bind_result($firstName, $lastName);
+ 
  $fetched = $stmt->fetch();
  $name = "$firstName $lastName";
+ 
  if ($fetched && isset($name)) {
    echo "<h2>Welcome to Inventory Helper, $name</h2>\n";
    $_SESSION['login'] = $name;

@@ -19,6 +19,7 @@
        justify-self: start;
    }
 </style>
+
 <?php
 $categoryID = $_POST['categoryID'];
 $category = Category::findCategory($categoryID);

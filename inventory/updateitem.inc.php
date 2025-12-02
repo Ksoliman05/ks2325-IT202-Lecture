@@ -9,35 +9,35 @@ if (!isset($_POST['itemID']) or (!is_numeric($_POST['itemID']))) {
    $item = Item::findItem($itemID);
    if ($item) {
    ?>
-       <h2>Update Item <?php echo $item->itemID; ?></h2><br>
+       <h2>Update Item <?php echo htmlspecialchars($item->itemID); ?></h2><br>
        <form name="items" action="index.php" method="post">
            <table>
                <tr>
                    <td>ItemID</td>
-                   <td><?php echo $item->itemID; ?></td>
+                   <td><?php echo htmlspecialchars($item->itemID); ?></td>
                </tr>
                <tr>
                    <td>Name</td>
-                   <td><input type="text" name="itemName" value="<?php echo $item->itemName; ?>"></td>
+                   <td><input type="text" name="itemName" value="<?php echo htmlspecialchars($item->itemName); ?>"></td>
                </tr>
                <tr>
                    <td>Category ID</td>
-               <td><input type="text" name="categoryID" value="<?php echo $item->categoryID; ?>"></td>
+               <td><input type="text" name="categoryID" value="<?php echo htmlspecialchars($item->categoryID); ?>"></td>
                </tr>
                <tr>
                    <td>List Price</td>
-                 <td><input type="text" name="listPrice" value="<?php echo $item->listPrice; ?>"></td>
+                 <td><input type="text" name="listPrice" value="<?php echo htmlspecialchars($item->listPrice); ?>"></td>
                </tr>
            </table><br><br>
            <input type="submit" name="answer" value="Update Item">
            <input type="submit" name="answer" value="Cancel">
-           <input type="hidden" name="itemID" value="<?php echo $itemID; ?>">
+           <input type="hidden" name="itemID" value="<?php echo htmlspecialchars($itemID); ?>">
            <input type="hidden" name="content" value="changeitem">
        </form>
    <?php
    } else {
    ?>
-       <h2>Sorry, item <?php echo $itemID; ?> not found</h2>
+       <h2>Sorry, item <?php echo htmlspecialchars($itemID); ?> not found</h2>
        <a href="index.php?content=listitems">List items</a>
 <?php
    }

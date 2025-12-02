@@ -17,13 +17,14 @@ class Item
        $this->categoryID = $categoryID;
        $this->listPrice = $listPrice;
    }
-   function __toString()
-   {
-       $output = "<h2>Item : $this->itemID</h2>" .
-           "<h2>Name: $this->itemName</h2>\n";
-       "<h2>Category ID: $this->categoryID at $this->listPrice</h2>\n";
-       return $output;
-   }
+    function __toString()
+    {
+        $output = "<h2>Item : $this->itemID</h2>" .
+                "<h2>Name: $this->itemName</h2>\n" .
+                "<h2>Category ID: $this->categoryID at $this->listPrice</h2>\n";
+
+        return $output;
+    }
    function saveItem()
    {
        $db = getDB();
